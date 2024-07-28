@@ -29,6 +29,9 @@
             ```
 
             Otherwise you can delete the `.envrc` file
+
+            Finally, update all the `changeme` text inside `flake.nix` for values relevant to your
+            project
           '';
 
         };
@@ -40,6 +43,20 @@
           name = "Basic Rust template";
           desc = ''
             A basic rust template that uses fenix to fetch rust tooling and naersk to compile
+          '';
+        };
+        go-basic = mkTpl {
+          path = ./src/go;
+          name = "Basic Golang template";
+          desc = ''
+            A barebones golang template
+          '';
+          additionalSetup = ''
+            The go project is not setup, run:
+
+            ```
+                go mod init github.com/<user>/<name>
+            ```
           '';
         };
       };
