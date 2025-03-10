@@ -15,16 +15,16 @@
         };
       in
       {
-        devShell = dsh.mkShell {
+        devShell = pkgs.devshell.mkShell {
           packages = with pkgs;
             [
               azure-cli
               terraform
               terraform-docs
             ];
-          env = {
-            test = "numtide";
-          };
+          env = [
+            #{ name = ""; value = ""; }
+          ];
         };
       }
     ));
