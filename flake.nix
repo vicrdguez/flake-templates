@@ -59,6 +59,13 @@
             ```
           '';
         };
+        tf-azure = mkTpl {
+          path = ./src/terraform/azure;
+          name = "Terraform-azure template";
+          desc = ''
+            Tools for developing terraform modules for azure
+          '';
+        };
       };
     };
 }
