@@ -66,6 +66,13 @@
             Tools for developing terraform modules for azure
           '';
         };
+        tofu-azure = mkTpl {
+          path = ./src/tofu/azure;
+          name = "OpenTofu-azure template";
+          desc = ''
+            Tools for developing OpenTofu modules for azure
+          '';
+        };
       };
     };
 }
